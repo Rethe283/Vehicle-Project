@@ -1,0 +1,39 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="row mb-auto">
+    <div class="col-md-4">
+        <div class="row no-gutters border mb-4">
+            <div class="col p-4 mb-4 ">
+                <p class="card-text">
+                    View our vast selection
+                    of vehicles.
+                </p>
+                <p>
+                    <a href="https://localhost:44366/Vehicles" class="stretched-link">Vehicle List</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="row no-gutters border mb-4">
+            <div class="col p-4 d-flex flex-column position-static">
+                <p class="card-text mb-auto">
+                    Press on Details to see the specs of the vehicles in Detail
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="row no-gutters border mb-4">
+            <div class="col p-4 d-flex flex-column">
+                <p>
+                    <a href="https://localhost:44366/Vehicles/Create" class="stretched-link">Add a new Vehicle</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+﻿@page
+@model VehicleCmsCommon.Pages.VehicleDetails.IndexModel
+
+@{
+    ViewData["Title"] = "Vehicle Details";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VehicleDetails[0].Vehicle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VehicleDetails[0].MaxSpeed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VehicleDetails[0].Doors)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VehicleDetails[0].Wheels)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.VehicleDetails) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.VehicleID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxSpeed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Doors)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Wheels)
+            </td>
+
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
